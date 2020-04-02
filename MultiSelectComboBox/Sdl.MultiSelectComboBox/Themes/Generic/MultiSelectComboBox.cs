@@ -190,6 +190,8 @@ namespace Sdl.MultiSelectComboBox.Themes.Generic
 
                     CurrentFilterService = FilterService ?? new DefaultFilterService();
                     CurrentFilterService.SetFilter(EnableFiltering ? SelectedItemsFilterTextBox?.Text : string.Empty);
+
+                    if (_dropdownListBox != null) _dropdownListBox.ItemsSource = ItemsCollectionViewSource?.View;
                 }
             }
         }
